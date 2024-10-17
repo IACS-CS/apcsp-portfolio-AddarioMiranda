@@ -1,0 +1,25 @@
+---
+import TimelinePage from "./TimelinePage.astro";
+
+let { title, assignment } = Astro.props;
+---
+
+<TimelinePage title={title}>
+  <div class="container">
+    <header>
+      <h1>
+        Project: {title}
+      </h1>
+      <nav>
+        <a href="../../">Back to Portfolio</a>
+      </nav>
+    </header>
+    <article>
+      <p>
+        Assignment: {assignment}
+      </p>
+      <hr>
+      <slot />
+    </article>
+  </div>
+</TimelinePage>
